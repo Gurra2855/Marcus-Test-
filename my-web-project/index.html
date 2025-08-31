@@ -1,27 +1,122 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min första webbsida</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min första webbsida</title>
+  <style>
+    /* Grundläggande färg & typografi */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #006400;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 10px 20px;
+    }
+
+    /* Hobby-sektion */
+    .hobby-section {
+      display: flex;
+      flex-direction: column; /* Stapla på små skärmar */
+      align-items: center;
+      padding: 20px;
+      background-color: #ffffff;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .hobby-text {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .hobby-text ul {
+      list-style-type: square;
+      padding-left: 20px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .hobby-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .hobby-images img {
+      max-width: 150px;
+      border-radius: 8px;
+      border: 2px solid #006400;
+      background: white;
+      padding: 5px;
+    }
+
+    /* Responsiv design för större skärmar */
+    @media(min-width: 768px) {
+      .hobby-section {
+        flex-direction: row; /* Lägg text och bilder bredvid varandra */
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+
+      .hobby-text {
+        width: 50%;
+        margin-bottom: 0;
+        text-align: left;
+      }
+
+      .hobby-text ul {
+        margin-left: 0;
+      }
+
+      .hobby-images {
+        width: 50%;
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Chas Academy!</h1>
-    <p>Min första webbsida är nu online.</p>
+  <h1>Chas Academy!</h1>
+  <p>Min första webbsida är nu online.</p>
+
+  <section class="hobby-section">
+    <div class="hobby-text">
+      <h2>Mina hobbys</h2>
+      <ul>
+        <li>Kolla på fotboll</li>
+        <li>Kolla på ishockey</li>
+        <li>Spela PC-spel</li>
+      </ul>
+    </div>
+
+    <div class="hobby-images">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Hammarby_IF_logo.svg" alt="Hammarby IF">
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="Manchester City FC">
+    </div>
+  </section>
 </body>
 </html>
-<section class="hobby-section">
-  <div class="hobby-text">
-    <h2>Mina hobbys</h2>
-    <ul>
-      <li>Kolla på fotboll</li>
-      <li>kolla på ishockey</li>
-      <li>Spela PC spel</li>
-    </ul>
-  </div>
 
-  <div class="hobby-image">
-    <img src="https://au.pinterest.com/pin/465348573982642682" alt="Hammarby IF">
-  </div>
-</section>
 
