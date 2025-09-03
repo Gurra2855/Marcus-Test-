@@ -36,7 +36,7 @@
     /* Hobby-sektion */
     .hobby-section {
       display: flex;
-      flex-direction: column; /* Stapla på små skärmar */
+      flex-direction: column;
       align-items: center;
       padding: 20px;
       background-color: #ffffff;
@@ -72,10 +72,55 @@
       padding: 5px;
     }
 
+    /* CV-sektion */
+    .cv-section {
+      padding: 20px;
+      background-color: #ffffff;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .cv-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .cv-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cv-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 4px solid #006400;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .cv-item h3 {
+      margin: 0 0 5px;
+      color: #2c3e50;
+      font-size: 20px;
+    }
+
+    .cv-item .date {
+      color: #555;
+      font-style: italic;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .cv-item p {
+      margin: 0;
+      text-align: left;
+      font-size: 16px;
+    }
+
     /* Responsiv design för större skärmar */
     @media(min-width: 768px) {
       .hobby-section {
-        flex-direction: row; /* Lägg text och bilder bredvid varandra */
+        flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
       }
@@ -93,6 +138,11 @@
       .hobby-images {
         width: 50%;
         justify-content: flex-start;
+      }
+
+      .cv-section {
+        margin: 20px auto;
+        max-width: 900px;
       }
     }
   </style>
@@ -114,6 +164,27 @@
     <div class="hobby-images">
       <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Hammarby_IF_logo.svg" alt="Hammarby IF">
       <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="Manchester City FC">
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Mina erfarenheter</h2>
+    <div class="cv-list">
+      <div class="cv-item">
+        <h3>Kock på Tugg burgers</h3>
+        <div class="date">Nov 2024 - Nuvarande</div>
+        <p>Jobb i kök, tilllagning av mat.</p>
+      </div>
+      <div class="cv-item">
+        <h3>Kock på Casual Street Food</h3>
+        <div class="date">Mars 2024 - Nov 2024</div>
+        <p>Samma typ av jobb som på Tugg Burgers.</p>
+      </div>
+      <div class="cv-item">
+        <h3>Kock på Surf Shack</h3>
+        <div class="date">Mars 2023 - Mars 2024</div>
+        <p>Samma här, arbete som kock.</p>
+      </div>
     </div>
   </section>
 </body>
